@@ -1,0 +1,29 @@
+.button-like {
+    margin: 10px;
+    min-width: 120px;
+    max-width: 120px;
+}
+
+.my-auto{
+    margin-top: auto;
+    margin-bottom: auto;   
+}
+
+#text-align-center {
+    text-align: center;
+}
+
+.hidden-error-text {
+    display: none;
+}
+
+.show-error-text {
+    display: block;
+    color: red;
+}
+
+#field {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 5px;
+}

@@ -1,0 +1,14 @@
+extends layout.pug
+
+block content
+    .row.h-100 
+        #text-align-center.col-sm-12.my-auto
+            h1 Log out 
+
+            p Do you really want to log out?
+
+            a#yes.button-like.btn.btn-warning.btn-lg(type="button", href="#") YES
+            a#no.button-like.btn.btn-primary.btn-lg(type="button", href="#") NO
+
+    script
+        include ../controllers/logout.client.controller.js

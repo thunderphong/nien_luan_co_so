@@ -1,0 +1,32 @@
+extends layout.pug
+
+block content
+    .container-sm
+        .row
+            .col-sm-12
+                h1.my-5.d-flex.justify-content-center USER PROFILE
+                form(action="", method="POST", id='profile')
+                    .form-group.row
+                        label.col-lg-2.col-form-label Tên đăng nhập
+                        input.form-control.col-lg-8(value=account,type=text, readonly, name='account')
+                    .form-group.row
+                        label.col-lg-2.col-form-label Tên người dùng
+                        input.form-control.col-lg-8(type=text, name="name")
+                    .form-group.row
+                        label.col-lg-2.col-form-label Họ người dùng
+                        input.form-control.col-lg-8(type='text', name="fname")
+                    .form-group.row
+                        label.col-lg-2.col-form-label Email
+                        input.form-control.col-lg-8(type='email', name="email")
+                    .form-group.row
+                        label.col-lg-2.col-form-label Số điện thoại
+                        input.form-control.col-lg-8(type='tel', name="tel")
+                    .form-group.row      
+                        .col-lg-12.d-flex.justify-content-center
+                            button.btn.btn-primary(type="submit") Chỉnh sửa hồ sơ
+    
+    script
+        include ../public/axios.min.js
+        include ../public/get/get-user-profile.js
+
+

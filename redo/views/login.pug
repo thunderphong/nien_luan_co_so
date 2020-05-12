@@ -1,0 +1,29 @@
+extends layout.pug
+
+block content
+    .container-sm
+        .row.h-100 
+            .col-sm-12.my-auto
+                h1 Login
+
+                form#loginForm(action="", method="POST")
+                    .form-group
+                        label Account
+                        input.form-control(type="text", name="account",  value=filledField ? filledField.account : "")
+                        small.hidden-error-text.form-text(data-name="account")
+                    .form-group
+                        label Password
+                        input.form-control(type="password", name="password")
+                        small.hidden-error-text.form-text(data-name="password")
+                    .row
+                        .col-sm-6
+                            button.btn.btn-primary(type="submit") Login
+                        .col-sm-6.d-flex.justify-content-end
+                            a(href="/register") Register
+                            
+    script(src="axios.min.js")
+    script(src="jwt-decode.js")
+    script
+        include ../validates/login.validate.js
+        include ../constants/error-message.js
+        
